@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FilePBE's Evaluation</title>
+</head>
+<body>
+
+<H1> Overview </H1>
+<p>This web page is for illustrating evaluation details of ENTER/FilePBE</p>
+
+<div>
+    <H2>Catalog</H2>
+    <ul>
+        <li>
+            <a href="#how_to_instantiate_enter"> How to instantiate Enter </a>
+            <ul>
+                <li> <a href="#Entity"> Entity</a></li>
+                <li> <a href="#Feature"> Feature</a></li>
+                <li> <a href="#Transform"> Transformation</a></li>
+                <li> <a href="#Synthesizer"> Synthesizer </a></li>
+            </ul>
+        </li>
+        <li> <a href="#how_filepbe_run">How FilePBE runs </a> </li>
+        <li>
+            <a href="#Benchmarks"> Benchmarks </a>
+            <ul>
+                <li> <a href="#Hades-F5"> Hades-F5 </a> </li>
+                <li> <a href="#Relation-2"> Relation-2 </a> </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#case_study">Case Study</a>
+            <ul>
+                <li> <a href="#task1">Task1</a> </li>
+                <li> <a href="#task2">Task2</a> </li>
+                <li> <a href="#task3">Task2</a> </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="how_to_instantiate_enter">
+    <H2> How to instantiate ENTER </H2>
+    <p>
+        ENTER is implemented as a framework in Java 8 and source codes will be released in the future.
+    </p>
+    <p>
+        To instantiate ENTER in a specific domain, developers are required to
+        inherit the Classes and implement the Interfaces exposed by ENTER.
+        We list the most important classes/interfaces in the following for your reference:
+    </p>
+
+    <H3 id="Entity"> Entity </H3>
+    <p> In a specific domain, one and only one class should be derived from Entity. </p>
+    <pre>
+  public interface Entity &lt;T extends Entity&lt;T&gt;&gt;
+  {
+      // use bit-vector to indicate which parts of the entity are changed, e.g., path of a file path or color of a spreadsheet cell
+      int getChange();
+
+      boolean isExample();
+
+      String getId();
+
+      // compare whether two entities are identical regarding the changed part
+      boolean equals(T other, int changeType);
+  }
+    </pre>
+
+    <H3 id="Feature"> Feature </H3>
+    <p> To exploit the domain knowledge, FeatureFunc can be derived multiple times and even customized at run time. </p>
+    <pre>
+  public interface FeatureFunc&lt;T extends Entity&lt;T&gt;&gt;
+  {
+      Object getFeature(T entity);
+  }
+    </pre>
+
+    <H3 id="Transform"> Transformation </H3>
+    <p> To exploit the domain operations, TransformFunc also can be derived multiple times and even customized at run time. </p>
+    <pre>
+  public interface TransformFunc &lt;T extends Entity&lt;T&gt;&gt;
+  {
+      // to indicate what features are used in this transform function
+      default Set&lt;FeatureFunc&lt;T&gt;&gt; usedFeatures()
+      {
+          return new HashSet<>();
+      }
+
+      // to indicate the operation type of this transform function
+      default int changeType()
+      {
+          return 0;
+      }
+
+      // EntityCollection is either chain or unordered set
+      Object transform(EntityCollection&lt;T&gt; entities);
+  }
+    </pre>
+
+    <H3 id="Synthesizer"> Synthesizer </H3>
+    <p> To gain more flexibility,
+        Developers can customize some of the synthesis procedure by implementing the call-back functions
+        , e.g., generate features/transformation at run time.
+    </p>
+    <pre>
+  public abstract class SmartSynthesizer &lt;T extends Entity&lt;T&gt;&gt;
+  {
+      ...
+
+      protected abstract void initialize();
+
+      protected abstract List&lt;FeatureFunc&lt;T&gt;&gt; configFeatures(IntermediateState&lt;T&gt; state);
+
+      protected abstract boolean configChainTransforms(int wholeChange,
+                                                       List&lt;ChainTransformFunc&lt;T&gt;&gt; candidateTransforms,
+                                                       ChainState&lt;T&gt; state);
+
+      protected abstract boolean configUnorderedTransforms(int wholeChange,
+                                                           Map&lt;Integer, List&lt;TransformFunc&lt;T&gt;&gt;&gt; candidateTransforms,
+                                                           IntermediateState&lt;T&gt; state);
+
+      ...
+  }
+    </pre>
+</div>
+
+<div id="how_filepbe_run">
+    <H2> How FilePBE runs </H2>
+    <p>
+        FilePBE currently does not have a GUI client.
+        For convenience of conducting experiments, we use config files to describe the inputs given by users and the expected results. Each user task includes:
+    </p>
+
+    <ul>
+        <li>input.csv</li>
+        <li>output.csv</li>
+        <li>ioMap.txt</li>
+    </ul>
+
+    <p>
+        "input.csv" is used to specify the file set before transformed. Each line represents an individual file, including the
+        file name, extension, path, file size, modification date, whether hidden, whether executable, whether readable, whether writable, whether deleted, whether as example and a unique id.
+    </p>
+
+    <p>
+        "output.csv" is used to specify the expected file set after transformed. Format of "output.csv" is the same as of "input.csv".
+    </p>
+
+    <p>
+        "ioMap.txt" is used to specify the example operations given by users. Each line in it stands for a single operation, starting
+        with the operation name, followed by id of the input file and id of expected output file, e.g., "move i1 o1", "rename i2 o2".
+    </p>
+</div>
+
+<div id="Benchmarks">
+    <H2> Benchmarks </H2>
+
+    <p>
+        Data settings of all the benchmarks (i.e., the file sets and chosen examples) are designed by ourselves, in order to
+        display the abilities of FilePBE and
+        compare FilePBE with its pre-optimized version. We try to make the data setting as close to real life as we can.
+    </p>
+
+    <p>
+        Tasks of the 13 "Hades-" benchmarks are from the state-of-the-art tool, Hades.
+        Unfortunately, however, their data set is not publicly available and our attempt to obtain it from the authors also failed.
+        Comparison with Hades is thus inapplicable.
+        Still, we try to follow their descriptions to simulate the data settings.
+    </p>
+
+    <p>
+        Tasks of the 3 "Relation-" benchmarks are designed to show that FilePBE is capable of expressing the relations between
+        files.
+    </p>
+
+    <p>
+        In the following, we select two benchmarks to illustrate in detail. To retrieve details of other benchmarks,
+        please download the data set in front of this page.
+    </p>
+
+    <H3 id="Hades-F5"> Hades-f5 </H3>
+
+    <p>
+        #Task Description: Put files in directories based on modification year/month/day
+    </p>
+
+    <p>
+        #File Set:<br/>
+    <pre>
+  --- input ---
+
+  /IMG_201101011231.JPG
+  ...
+  /IMG_201303031834.JPG
+
+  --- output ---
+
+  /2011/
+    1/
+      1/
+        IMG_201101011231.JPG
+        ...
+      ...
+    ...
+    12/
+      ...
+  /2012/
+    ...
+  /2013/
+    ...
+    3/
+      3/
+        IMG_201303031834.JPG
+        ...
+      ...
+    ...
+</pre>
+    </p>
+
+    <p>
+        #Selected Examples:<br/>
+    <pre>
+  // Note that we typically choose examples concerning distinctive year, month and day,
+  // in case the synthesizer replace features with constant value.
+  // For instance, if all the example are of the same year "2015", the synthesizer may end up finding only the constant "2015"
+  // instead of the desired feature "modificationYear"
+  IMG_201503150619.jpg => 2015/3/15/IMG_201503150619.jpg
+  IMG_201503161305.jpg => 2015/3/16/IMG_201503161305.jpg
+  IMG_201505021351.jpg => 2015/5/2/IMG_201505021351.jpg
+  IMG_201601141102.jpg => 2016/1/14/IMG_201601141102.jpg
+  IMG_201704171815.jpg => 2017/4/17/IMG_201704171815.jpg
+</pre>
+    </p>
+
+    <p>
+        #Synthesized Program:<br/>
+    <pre>
+  partition(modificationYear);
+  partition(modificationMonth);
+  partition(modificationDay);
+  setPath(ConstStr(),path,ConstStr(/),modificationYear,ConstStr(/),modificationMonth,ConstStr(/),modificationDay); // constant strings and features are concatenated
+</pre>
+    </p>
+
+    <H3 id="Relation-2"> Relation-2 </H3>
+    <p>
+        #Task Description: For those zip files with the same prefix, delete the old versions, and unzip the latest ones to corresponding directories
+    </p>
+    <p>
+        #File Set:
+    <pre>
+  --- input ---
+
+  151250018-v1.zip
+  151250018-v2.zip
+  151250038-v1.zip
+  151250048-v1.zip
+  151250052-v1.zip
+  151250052-v2.zip
+  151250052-v3.zip
+  151250054-v1.zip
+  151250057-v1.zip
+  151250059-v1.zip
+  151250072-v1.zip
+
+  --- output ---
+
+  151250018/151250018-v2.unzip
+  151250038/151250038-v1.unzip
+  151250048/151250048-v1.unzip
+  151250052/151250052-v3.unzip
+  151250054/151250054-v1.unzip
+  151250057/151250057-v1.unzip
+  151250059/151250059-v1.unzip
+  151250072/151250072-v1.unzip
+
+    </pre>
+    </p>
+    <p>
+        #Selected Examples:
+    </p>
+    <pre>
+  151250018-v1.zip => (delete, null)
+  151250018-v2.zip => (unzip, 151250018/*)
+  151250052-v1.zip => (delete, null)
+  151250052-v2.zip => (delete, null)
+  151250052-v3.zip => (unzip, 151250052/*)
+  151250072-v1.zip => (unzip, 151250072/*)
+    </pre>
+</div>
+
+
+
+<H2 id="case_study"> Case Study </H2>
+
+<P>
+    We invite an Android researcher to assist us on this case study. Due to the lack of GUI, we simulate the interaction
+    in this way: As the participant performed operations (gave examples) in the file explorer, we accordingly
+    recorded the operation in the ioMap.txt (see 'How FilePBE runs'). When all examples were given, we run FilePBE and
+    showed the participant preview of the transformed results as well as meaning of the synthesized program.
+    If it was confirmed by the participant as what he intended to do, the task was marked finished.
+    Otherwise, we asked the participant to provide new examples and repeat the procedure.
+</P>
+
+<p>
+    The data and interaction records were shown below.
+</p>
+
+<H3 id="task1"> Task-1 </H3>
+<H3 id="task2"> Task-2 </H3>
+<H3 id="task3"> Task-3 </H3>
+
+</body>
+</html>
