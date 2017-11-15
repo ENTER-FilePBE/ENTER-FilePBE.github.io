@@ -16,6 +16,7 @@ for those zip files with the same prefix, delete the old versions, and unzip the
 151250052-v3.zip (example)
 151250054-v1.zip
 151250057-v1.zip
+151250057-v2.zip
 151250059-v1.zip
 151250072-v1.zip (example)
 ###
@@ -27,6 +28,6 @@ for those zip files with the same prefix, delete the old versions, and unzip the
 151250048/151250048-v1.unzip
 151250052/151250052-v3.unzip
 151250054/151250054-v1.unzip
-151250057/151250057-v1.unzip
+151250057/151250057-v2.unzip
 151250059/151250059-v1.unzip
 151250072/151250072-v1.unzip
