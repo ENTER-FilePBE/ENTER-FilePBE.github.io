@@ -1,0 +1,19 @@
+/test.sh
+/make.sh
+/lecture.pdf
+/note.txt
+
+#
+/sh/test.sh  (+x)
+/sh/make.sh  (+x)
+/lecture.pdf
+/note.txt
+
+输出程序:
+start program:
+  partition by: extension
+    branch:
+      condition: extension = sh
+        transform: [(set executable: true)(change path: extension)]
+      condition: rest
+        transform: do-nothing

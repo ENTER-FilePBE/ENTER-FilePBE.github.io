@@ -1,0 +1,98 @@
+Hades-F4
+
+--- target ---
+
+Append last 3 directory names to file name and delete directories
+
+--- input1 ---
+
+###
+/school/
+  2016/
+    cpp-project/
+      run.sh (example)
+    java-project/
+      run.sh (example)
+  2017/
+    linux/
+      slides/
+        ch1/
+          ch1-0.pdf (example)
+          ch1-1.pdf
+        ch2/
+          ch2-0.pdf
+          ch2-1.pdf
+          ch2-2.pdf
+          ch2-3.pdf
+        ch3/
+          ch3.pdf
+        ch4/
+          ch4.pdf
+      homework1/
+        script.sh (example)
+      homework2/
+        script.sh
+      homework3/
+        script.sh
+      homework4/
+        script.sh
+/tools/
+  shell/
+    now/
+      download.sh (example)
+      status.sh (executable)
+/downloads/
+  Sam/
+    v-1/
+      script.sh (example)
+    v-2/
+      script.sh
+  Jerry/
+    v-1/
+      script.sh (example)
+    v-2/
+      script.sh
+###
+
+--- output1 ---
+
+school-2016-cpp-project-run.sh
+school-2016-java-project-run.sh
+/school/
+  2017-linux-homework1-script.sh
+  2017-linux-homework2-script.sh
+  2017-linux-homework3-script.sh
+  2017-linux-homework4-script.sh
+  2017/
+    linux-slides-ch1-ch1-0.pdf
+    linux-slides-ch1-ch1-1.pdf
+    linux-slides-ch2-ch2-0.pdf
+    linux-slides-ch2-ch2-1.pdf
+    linux-slides-ch2-ch2-2.pdf
+    linux-slides-ch2-ch2-3.pdf
+    linux-slides-ch3-ch3.pdf
+    linux-slides-ch4-ch4.pdf
+tools-shell-now-download.sh
+tools-shell-now-status.sh
+downloads-Sam-v-1-script.sh
+downloads-Sam-v-1-script.sh
+downloads-Jerry-v-2-script.sh
+downloads-Jerry-v-2-script.sh
+
+--- input2 ---
+
+/2011/
+  1/
+    1/
+      1.JPG
+      2.JPG
+      ...
+    ...
+  ...
+...
+
+--- output2 ---
+
+/2011-1-1-1.JPG
+/2011-1-1-2.JPG
+...

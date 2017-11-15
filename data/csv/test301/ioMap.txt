@@ -1,0 +1,4 @@
+zip i10 i11 o4
+keep i7 o7
+keep i8 o8
+keep i9 o9

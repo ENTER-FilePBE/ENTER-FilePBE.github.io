@@ -1,0 +1,26 @@
+/p2016-11-11.png
+/p2016-11-12.png
+/p2016-12-11.png
+/p2016-12-12.png
+/p2015-11-11.png
+/p2015-12-11.png
+
+#
+/2015/
+  11/
+    p2016-11-11.png
+    p2016-11-12.png
+  12/
+    p2016-12-11.png
+    p2016-12-12.png
+/2016/
+  11/
+    p2015-11-11.png
+  12/
+    p2015-12-11.png
+
+输出程序:
+start program:
+  partition by: split(-, 0)
+    partition by: split(-, 1)
+      transform: [(change path: split(-, 0), split(-, 1))]

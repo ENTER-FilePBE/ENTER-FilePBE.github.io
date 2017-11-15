@@ -1,0 +1,4 @@
+move i1 o1
+move i3 o3
+move i5 o5
+move i6 o6

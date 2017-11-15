@@ -1,0 +1,10 @@
+chext i1 o1
+chext i2 o2
+chext i5 o5
+chext i6 o6
+chext i8 o8
+chext i9 o9
+keep i11 o11
+keep i24 o24
+keep i27 o27
+keep i30 o30

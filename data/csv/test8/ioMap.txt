@@ -1,0 +1,6 @@
+chmod+x i7 o7
+chmod+x i9 o9
+keep i6 o6
+move i7 o7
+keep i8 o8
+move i9 o9

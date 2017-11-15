@@ -1,0 +1,8 @@
+chain-by modificationTime OldHead
+  if < modificationTime OldHead ConstDateTime(2017-07-01 00:00:00.000)
+    then
+      transform
+        delete
+    else
+      transform
+        doNothing

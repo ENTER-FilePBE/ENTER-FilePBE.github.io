@@ -1,0 +1,29 @@
+/Jazz/
+  naima.flac
+/Rock/
+  help.ogg
+  Muse/
+    bliss.flac
+/Pop/
+  Adele/
+    tired.mp3
+
+#
+/flac/
+  Jazz/
+    naima.flac
+  Rock/
+    Muse/
+      bliss.flac
+/ogg/
+  Rock/
+    help.ogg
+/mp3/
+  Rock/
+    Muse/
+      bliss.mp3
+  Jazz/
+    naima.mp3
+  Pop/
+    Adele/
+      tired.mp3

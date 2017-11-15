@@ -1,0 +1,11 @@
+rename i1 o1
+keep i2 o2
+keep i3 o3
+rename i4 o4
+keep i5 o5
+move i1 o1
+move i4 o4
+keep i11 o11
+rename i15 o15
+move i15 o15
+keep i16 o16

@@ -1,0 +1,4 @@
+move i1 o1
+move i6 o6
+move i12 o12
+move i18 o18

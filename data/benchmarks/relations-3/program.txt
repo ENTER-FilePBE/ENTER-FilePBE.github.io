@@ -1,0 +1,10 @@
+partition-by extension
+  if = extension ConstStr(pdf)
+    then
+      partition-by subPath(1, 2)
+        chain-by modificationTime OldHead
+          transform
+            setNameWithOrderPrefix(ConstInt(1), ConstStr(-), fileName)
+    else
+      transform
+        doNothing

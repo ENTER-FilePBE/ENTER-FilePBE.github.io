@@ -1,0 +1,22 @@
+Hades-F22
+
+--- target ---
+
+Keep all files older than a specific date
+
+--- input ---
+
+###
+skip
+###
+
+/IMG_201101011231.JPG
+...
+/IMG_201303031834.JPG
+
+
+--- output ---
+
+/IMG_201101011231.JPG
+...
+/IMG_201206011923.JPG

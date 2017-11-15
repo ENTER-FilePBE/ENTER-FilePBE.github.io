@@ -1,0 +1,8 @@
+partition-by extension
+  if = extension ConstStr(zip)
+    then
+      transform
+        setExtension(ConstStr(tar))
+    else
+      transform
+        doNothing

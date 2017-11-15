@@ -1,0 +1,8 @@
+partition-by subPath(0, 1)
+  if = subPath(0, 1) ConstStr(DoNotModify)
+    then
+      transform
+        setWritable(false)
+    else
+      transform
+        doNothing

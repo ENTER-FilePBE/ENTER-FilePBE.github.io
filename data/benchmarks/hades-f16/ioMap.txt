@@ -1,0 +1,6 @@
+delete i1 o1
+delete i30 o30
+keep i31 o31
+delete i155 o155
+keep i156 o156
+keep i183 o183

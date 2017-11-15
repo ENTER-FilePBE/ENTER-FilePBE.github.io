@@ -1,0 +1,13 @@
+partition-by extension
+  if = extension ConstStr(txt)
+    then
+      transform
+        copy(ConstStr(temp), subPath(0,-1))
+    else
+      if = extension ConstStr(sh)
+        then
+          transform
+            copy(ConstStr(temp), subPath(0,-1))
+        else
+          transform
+            doNothing

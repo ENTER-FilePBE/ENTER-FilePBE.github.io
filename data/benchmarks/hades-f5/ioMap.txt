@@ -1,0 +1,5 @@
+move i1 o1
+move i2 o2
+move i40 o40
+move i207 o207
+move i512 o512

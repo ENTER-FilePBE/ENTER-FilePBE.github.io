@@ -1,0 +1,18 @@
+partition-by extension
+  if = extension ConstStr(mp3)
+    then
+      transform
+        setExtension("ogg")
+    else
+      if = extension ConstStr(wma)
+        then
+          transform
+            setExtension("ogg")
+        else
+          if = extension ConstStr(m4a)
+            then
+              transform
+                setExtension("ogg")
+            else
+              transform
+                doNothing

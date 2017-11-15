@@ -1,0 +1,8 @@
+partition-by extension
+  if = extension ConstStr(txt)
+    then
+      transform
+        setExtension("pdf")
+    else
+      transform
+        setExtension("txt")

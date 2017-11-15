@@ -1,0 +1,9 @@
+partition-by extension
+  if = extension ConstStr(sh)
+    then
+      transform
+        setExecutable(true)
+        setPath(extension)
+    else
+      transform
+        doNothing

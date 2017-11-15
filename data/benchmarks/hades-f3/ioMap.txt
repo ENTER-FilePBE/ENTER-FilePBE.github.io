@@ -1,0 +1,11 @@
+keep i1 o1
+keep i2 o2
+keep i3 o3
+keep i5 o5
+keep i10 o10
+keep i12 o12
+keep i17 o17
+copy i1 o56
+copy i2 o64
+copy i10 o76
+copy i17 o60

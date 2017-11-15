@@ -1,0 +1,9 @@
+chmod+x i10 o10
+chmod+x i11 o11
+move i12 o12
+keep i13 o13
+keep i14 o14
+move i15 o15
+chmod+x i16 o16
+move i17 o17
+keep i18 o18

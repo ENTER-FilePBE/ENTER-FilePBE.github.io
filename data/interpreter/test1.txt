@@ -1,0 +1,4 @@
+partition-by subNameRight(4)
+  partition-by subNameMiddle(2, 2)
+    transform
+      setPath(subNameRight(4), subNameMiddle(2,2))

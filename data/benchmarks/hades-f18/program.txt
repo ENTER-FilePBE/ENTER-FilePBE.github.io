@@ -1,0 +1,14 @@
+partition-by extension
+  if = extension ConstStr(xml)
+    then
+      chain-by size LongAsc
+        if <= size LongAsc ConstLong(990)
+          then
+            transform
+              doNothing
+          else
+            transform
+              setExtension(ConstStr(txt))
+    else
+      transform
+        doNothing

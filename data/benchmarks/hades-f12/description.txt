@@ -1,0 +1,74 @@
+Hades-f12
+
+--- target ---
+
+Convert .zip archives to tarballs
+
+--- input ---
+
+###
+/temp/
+  notes.txt (example)
+  TBBT.mp4
+  fse12_talk.pptx (example)
+  fse13_talk.pptx
+  resume.zip
+  GRE/
+    ReadMe.txt
+    Writing/
+      tutorial.pdf
+      summary.docx
+    Verbal/
+      p1-50.pdf
+      p51-100.pdf
+      p101-150.pdf
+      p151-200.pdf
+      p201-250.pdf
+    Quantitative/
+      p1-50.pdf
+      p51-120.pdf
+/music/
+  Prayer.mp3 (2016-1-1, example)
+  Sagitta luminis.mp3
+  Spirits.mp3
+  She.mp3
+  NO-MAN.mp3
+  Changes.mp3
+  Moonscape.mp3
+  what for.ogg
+  Sing Along.wma
+  Can't You See.m4a
+  America.m4a
+/packages/
+  sqlite.zip
+  python.zip
+  mysql-v6.tar
+  intellij-14.zip
+  sublime.zip
+  emacs.rar
+  chrome.zip (example)
+  word.zip
+  excel.zip
+  powerpoint.zip
+/backup/
+  2015-12-31.zip (2015-12-31, example)
+  2016-01-31.zip (2016-1-31, example)
+  2016-02-29.zip
+  2016-03-31.zip
+  2016-04-30.zip
+  2016-05-31.zip
+  2016-06-30.zip
+  2016-07-31.zip
+  2016-08-31.zip
+  2016-09-30.zip
+  2016-10-31.zip
+  2016-11-30.zip
+  2016-12-31.zip
+  2017-01-31.zip
+  2017-02-28.zip
+  2017-03-31.zip
+  2017-04-30.zip
+  2017-05-31.zip
+  2017-06-30.zip
+  2017-07-31.zip
+###

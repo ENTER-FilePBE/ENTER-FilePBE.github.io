@@ -1,0 +1,9 @@
+partition-by extension
+  if = extension ConstStr(png)
+    then
+      transform
+        setName(path, ConstStr(-), fileName)
+        setPath(ConstStr(pictures))
+    else
+      transform
+        doNothing

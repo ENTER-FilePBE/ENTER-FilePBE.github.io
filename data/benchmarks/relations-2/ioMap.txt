@@ -1,0 +1,6 @@
+unzip i2 o18
+delete i1 o1
+delete i5 o5
+delete i6 o6
+unzip i7 o12
+unzip i11 o14

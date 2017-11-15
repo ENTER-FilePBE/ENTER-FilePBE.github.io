@@ -1,0 +1,4 @@
+partition-by nameSplit(".", 0)
+  partition-by nameSplit(".", 1)
+    transform
+      setPath(ConstStr(/), nameSplit(".", 0), ConstStr(/), nameSplit(".", 1))

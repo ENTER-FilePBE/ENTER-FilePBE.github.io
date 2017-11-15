@@ -1,0 +1,111 @@
+Ours-f3
+
+--- target ---
+
+sort the pdf slides in each directory according to modificationTime and add order prefix to them
+
+--- input ---
+
+###
+/haskell/
+  introduction.pdf (2016-9-2, example)
+  development-environment.pdf (2016-9-15, example)
+  basic.pdf (2016-9-27, example)
+  list.pdf (2016-10-16, example)
+  higher-order-function.pdf (2016-10-29)
+  algebraic-data-type.pdf (2016-11-14)
+  module.pdf (2016-11-29)
+  io.pdf (2016-12-16)
+  lazy-evaluation.pdf (2016-12-23)
+  verification.pdf (2016-12-31)
+  containers.pdf (2017-1-8)
+  homework/
+    hw1/
+      hw1.tex (example)
+      solution.hs
+    hw2/
+      hw2.tex
+      solution.hs
+    hw3/
+      hw3.tex
+      solution.hs
+    hw4/
+      hw4.tex
+      solution.hs
+/CHI/
+  overview.pdf (2016-12-23, example)
+  principle.pdf (2017-1-7, example)
+  basic_evaluation.pdf (2017-1-14)
+  user_observation.pdf (2017-1-22)
+  interview.pdf (2017-1-31)
+  user_test.pdf (2017-2-14)
+  basic_knowledge.pdf (2017-3-1)
+  interaction_requirement.pdf (2017-3-11)
+  design_of_interactive_system.pdf (2017-3-19)
+  visible_design.pdf (2017-4-11)
+  interaction_model_and_theory.pdf (2017-4-21)
+  user_center.pdf (2017-5-11)
+  homework/
+    evaluation.docx (2016-5-2, example)
+    user_test.docx
+    project.mp4
+/linux/
+  homework1.docx (example)
+  homework2.docx
+  homework3.docx
+  homework/
+    tom_141250148_hw1.zip
+    tom_141250148_hw2.zip
+    tom_141250148_hw3.zip
+  ch0-course_introduction.pdf (2015-9-3)
+  ch1-1-1-linux_basics.pdf (2015-9-10)
+  ch1-1-2-linux_basics2.pdf (2015-9-18)
+  ch1-2-shell_programming.pdf (2015-9-26)
+  ch3-0-programming_prerequisite.pdf (2015-10-6)
+  ch3-1-system_programming.pdf (2015-10-13)
+  ch4-2-kernel_driver.pdf (2015-10-21)
+/machine-learning/
+  hw1/
+    ps1_template.log
+    ps1_template.tex
+    141250148_1_v1.zip
+    141250148_1_v2.zip
+  hw2/
+    ps2_template.tex
+    141250148_2_v1.zip
+    141250148_2_v2.zip
+    141250148_2_v3.zip
+  hw3/
+    ps3_template.log
+    ps3_template.tex
+    141250148_3_v1.zip
+    141250148_3_v2.zip
+  hw4/
+    ps4_template.log
+    ps4_template.tex
+    141250148_1_v4.zip
+  Chap01_v2.pdf (2017-9-2)
+  Chap02_v3.pdf (2017-9-9)
+  Chap03_v3.pdf (2017-9-17)
+  Chap04_v2.pdf (2017-9-25)
+  Chap05.pdf (2017-10-8)
+  Chap06.pdf (2017-10-15)
+  Chap07.pdf (2017-10-21)
+  Chap08.pdf (2017-11-1)
+  Chap09.pdf (2017-11-12)
+  Chap10.pdf (2017-11-19)
+/pattern_recognition/
+  PR_01.pdf (2016-2-17)
+  PR_02.pdf (2016-3-1)
+  PR_03.pdf (2016-3-12)
+  PR_04.pdf (2016-3-25)
+  PR_05.pdf (2016-4-8)
+  PR_06.pdf (2016-4-17)
+  PR_07.pdf (2016-4-29)
+  PR_08.pdf (2016-5-3)
+  PR_09.pdf (2016-5-17)
+  PR_10.pdf (2016-5-23)
+  PR_11.pdf (2016-6-11)
+  PR_12.pdf (2016-6-29)
+  nn.md
+###

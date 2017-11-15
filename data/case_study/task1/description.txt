@@ -1,0 +1,12 @@
+Case study-task1
+
+--- target ---
+
+extract png from the apk files and put them to "pictuers" directory, the file
+should append path to their names to prevent covering
+
+--- input ---
+
+###
+skip
+###

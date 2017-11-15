@@ -1,0 +1,58 @@
+Hades-F8
+
+--- target ---
+
+Make files in “DoNotModify” directory read-only
+
+--- input ---
+
+###
+/DoNotModify/
+  group-meeting/
+    note-161231.docx (example)
+    note-170102.docx
+    note-170323.docx
+    note-170407.docx
+    note-170509.docx
+    note-170803.docx
+  records/
+    stu-20487046.pdf
+    stu-52146985.pdf (example)
+    stu-69844785.pdf
+    stu-15785448.pdf
+  scripts/
+    sort-file.sh
+    Makefile (example)
+    random.py
+    print.sh
+  documents/
+    preliminery.docx
+    configuration.docx
+    bug.txt
+schedule.xls (example)
+/photos/
+  IMG_201703191033.jpg (example)
+  IMG_201703250917.jpg
+  IMG_201706011508.jpg
+/drafts/
+  wjr/
+    pbe.docx (example)
+    symbolic.docx
+    knowledge-graph.docx
+  nas/
+    github.docx
+    distance.docx
+  xzf/
+    android.docx
+    design.docx
+  wll/
+    android-test.docx
+    ios-test.docx
+  jyy/
+    multi-thread.docx
+    memory.docx
+###
+
+--- output ---
+
+all files made read-only

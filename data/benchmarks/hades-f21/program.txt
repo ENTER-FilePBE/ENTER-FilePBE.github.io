@@ -1,0 +1,10 @@
+partition-by extension
+  if = extension ConstStr(c)
+    then
+      partition-by subPath(0, -1)
+        transform
+          setName(subPath(0, -1), ConstStr(-), fileName)
+          setPath(ConstStr(MOSS))
+    else
+      transform
+        doNothing

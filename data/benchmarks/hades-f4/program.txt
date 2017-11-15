@@ -1,0 +1,5 @@
+partition-by subPath(0, -4)
+  partition-by subPath(-4, -1)
+    transform
+      setName(subPath(-4, -1),  ConstStr(-), fileName)
+      setPath(subPath(0, -4))
