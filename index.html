@@ -25,7 +25,10 @@
 <body>
 
 <H1> Overview </H1>
-<p>This web page is for illustrating evaluation details of ENTER/FilePBE</p>
+<p>This web page is for illustrating the usage of ENTER/FilePBE and their evaluation details. </p>
+
+<p>Concerning the information between code lines may involve authors' identities, we provide a <a href="http://127.0.0.1:5000/FilePBE.jar">binary release</a>
+    of FilePBE for verifying the reproducibility. Data set we use is also included inside. </p>
 
 <div>
     <H2>Catalog</H2>
@@ -39,7 +42,7 @@
                 <li> <a href="#Synthesizer"> Synthesizer </a></li>
             </ul>
         </li>
-        <li> <a href="#how_filepbe_run">How FilePBE runs </a> </li>
+        <li> <a href="#how_filepbe_run">How to run FilePBE</a> </li>
         <li>
             <a href="#Benchmarks"> Benchmarks </a>
             <ul>
@@ -61,7 +64,7 @@
 <div id="how_to_instantiate_enter">
     <H2> How to instantiate ENTER </H2>
     <p>
-        ENTER is implemented as a framework in Java 8 and source codes will be released in the future.
+        ENTER is implemented as a framework with Java 8 and now hosted as a private repository in GitHub.
     </p>
     <p>
         To instantiate ENTER in a specific domain, developers are required to
@@ -149,7 +152,7 @@
 </div>
 
 <div id="how_filepbe_run">
-    <H2> How FilePBE runs </H2>
+    <H2> How to run FilePBE </H2>
     <p>
         FilePBE currently does not have a GUI client.
         For convenience of conducting experiments, we use config files to describe the inputs given by users and the expected results. Each user task includes:
@@ -173,6 +176,19 @@
     <p>
         "ioMap.txt" is used to specify the example operations given by users. Each line in it stands for a single operation, starting
         with the operation name, followed by id of the input file and id of expected output file, e.g., "move i1 o1", "rename i2 o2".
+    </p>
+
+    <p>
+        To use FilePBE in the above link, first make sure Java 8 is installed in your machine, and then
+        remember to put the above three files for a task in the same directory, say, foo/bar.
+        Finally, to synthesize the program and verify the correctness, use the command:
+    </p>
+    <pre>
+    java -jar FilePBE.jar foo/bar
+    </pre>
+
+    <p>
+        Test cases used in the evaluation are packaged together with the .jar file, but you can also try new tasks by supplying configuration files.
     </p>
 </div>
 
@@ -201,6 +217,8 @@
 
     <p>
         The table below summarizes the statistics and data links of the benchmarks.
+        Note that the program grammar is slightly different from described in the paper for implementation facilities,
+        but it's very easy to translate from one to the other.
     </p>
     <table>
         <tr>
@@ -218,30 +236,30 @@
             <td>Make all script files executable</td>
             <td>5</td>
             <td>44</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f2/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f2/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f2/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f2/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f2/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f2/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f2/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f2/program.txt"> program.txt </a></td>
         </tr>
         <tr>
             <td>Hades-f3</td>
             <td>Copy all text and bash files to directory “temp”</td>
             <td>7</td>
             <td>49</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f3/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f3/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f3/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f3/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f3/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f3/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f3/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f3/program.txt"> program.txt </a></td>
         </tr>
         <tr>
             <td>Hades-f4</td>
             <td>Append the last three directory names to file names and delete directories</td>
             <td>7</td>
             <td>20</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f4/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f4/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f4/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f4/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f4/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f4/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f4/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f4/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -249,10 +267,10 @@
             <td>Put files in directories based on modification year/month/day</td>
             <td>5</td>
             <td>593</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f5/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f5/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f5/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f5/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f5/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f5/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f5/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f5/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -260,10 +278,10 @@
             <td>Make files in the “DoNotModify” directory read-only</td>
             <td>6</td>
             <td>32</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f8/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f8/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f8/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f8/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f8/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f8/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f8/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f8/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -271,10 +289,10 @@
             <td>Convert .mp3 .wma and .m4a files to .ogg ones</td>
             <td>10</td>
             <td>31</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f9/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f9/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f9/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f9/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f9/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f9/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f9/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f9/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -282,10 +300,10 @@
             <td>Convert .zip archives to tarballs</td>
             <td>6</td>
             <td>56</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f12/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f12/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f12/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f12/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f12/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f12/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f12/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f12/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -293,10 +311,10 @@
             <td>Organize all files based on their extensions names</td>
             <td>4</td>
             <td>24</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f13/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f13/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f13/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f13/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f13/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f13/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f13/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f13/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -304,10 +322,10 @@
             <td>Convert .zip archives to tarballs</td>
             <td>6</td>
             <td>186</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f16/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f16/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f16/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f16/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f16/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f16/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f16/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f16/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -315,10 +333,10 @@
             <td>Convert xml files >= 990B to text files</td>
             <td>8</td>
             <td>37</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f18/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f18/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f18/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f18/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f18/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f18/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f18/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f18/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -326,10 +344,10 @@
             <td>Append “lgst” to names of the largest file and “sml” to xml files <= 99B</td>
             <td>9</td>
             <td>593</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f19/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f19/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f19/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f19/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f19/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f19/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f19/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f19/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -337,10 +355,10 @@
             <td>Append its parent name to each .c file and copy it to “MOSS”</td>
             <td>5</td>
             <td>48</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f21/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f21/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f21/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f21/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f21/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f21/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f21/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f21/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -348,10 +366,10 @@
             <td>Keep all files older than a specific date</td>
             <td>7</td>
             <td>593</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f22/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f22/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f22/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/hades-f22/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f22/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f22/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f22/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/hades-f22/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -359,10 +377,10 @@
             <td>Copy the pdf file in each directory to the “temp” directory and append the old directory name to them</td>
             <td>8</td>
             <td>31</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-1/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-1/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-1/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-1/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-1/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-1/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-1/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-1/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -370,10 +388,10 @@
             <td>For zip files with the same prefix, delete old versions, and unzip the latest to corresponding directories</td>
             <td>6</td>
             <td>12</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-2/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-2/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-2/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-2/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-2/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-2/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-2/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-2/program.txt"> program.txt </a></td>
         </tr>
 
         <tr>
@@ -381,10 +399,10 @@
             <td>Sort pdf slides in each directory according to the modification time and add an order prefix to them</td>
             <td>9</td>
             <td>85</td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-3/input.csv"> input.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-3/output.csv"> output.csv </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-3/iomap.txt"> ioMap.txt </a></td>
-            <td><a href="https://enter-filepbe.github.io/data/benchmarks/relations-3/program.txt"> program.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-3/input.csv"> input.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-3/output.csv"> output.csv </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-3/iomap.txt"> ioMap.txt </a></td>
+            <td><a href="http://127.0.0.1:5000/data/benchmarks/relations-3/program.txt"> program.txt </a></td>
         </tr>
 
     </table>
@@ -440,11 +458,11 @@
   // in case the synthesizer replace features with constant value.
   // For instance, if all the example are of the same year "2015", the synthesizer may end up finding only the constant "2015"
   // instead of the desired feature "modificationYear"
-  IMG_201503150619.jpg => 2015/3/15/IMG_201503150619.jpg
-  IMG_201503161305.jpg => 2015/3/16/IMG_201503161305.jpg
-  IMG_201505021351.jpg => 2015/5/2/IMG_201505021351.jpg
-  IMG_201601141102.jpg => 2016/1/14/IMG_201601141102.jpg
-  IMG_201704171815.jpg => 2017/4/17/IMG_201704171815.jpg
+  IMG_201503150619.jpg => (move, 2015/3/15/IMG_201503150619.jpg)
+  IMG_201503161305.jpg => (move, 2015/3/16/IMG_201503161305.jpg)
+  IMG_201505021351.jpg => (move, 2015/5/2/IMG_201505021351.jpg)
+  IMG_201601141102.jpg => (move, 2016/1/14/IMG_201601141102.jpg)
+  IMG_201704171815.jpg => (move, 2017/4/17/IMG_201704171815.jpg)
     </pre>
 
     <p>
@@ -511,7 +529,7 @@
     <pre>
   chain(modificationTime, TimeBack);
   if (isHead)
-    then { unzip(nameSplit("-", 0)); }
+    then { unzip(nameSplit("-", 0)); }  // unzip to directories named after the first component of file name split with "-"
     else { delete; }
     </pre>
 </div>
@@ -519,23 +537,23 @@
 <H2 id="case_study"> Case Study </H2>
 
 <P>
-    We invite an Android researcher to assist us on this case study. The file set contained 15,247 .apk files (around 128 GB).
+    We invite an Android researcher (a postdoc at our university) to assist us on this case study. The file set contained 15, 247 .apk files (around 128 GB).
     For practical use, FilePBE is capable of treating archived file as a single file (as in Task2 and Task3) or a directory (as in Task1).
-    For this reason, Task1 uses a different input file set: 1,523 files extracted from 5 .apk files
+    For this reason, Task1 uses a different input file set: 1, 523 files extracted from 5 .apk files
     (the synthesized program can still be applied to the whole file set).
 </P>
 
 <p>
     Due to the lack of GUI, we simulate the interaction
     in this way: As the participant performed operations (gave examples) in the file explorer, we accordingly
-    recorded the operation in the ioMap.txt (see 'How FilePBE runs'). When all examples were given, we run FilePBE and
-    showed the participant preview of the transformed results as well as meaning of the synthesized program.
+    recorded the operation in the ioMap.txt (see 'How to run FilePBE'). When all examples were given, we run FilePBE and
+    showed the participant preview of the transformed results as well as semantics of the synthesized program.
     If it was confirmed by the participant as what he intended to do, the task was marked finished.
     Otherwise, we asked the participant to provide new examples and repeat the procedure.
 </P>
 
 <p>
-    The table below summarizes the statistics and data links of the tasks. Details of conducting the tasks are recorded
+    The table below summarizes the statistics and data links of the tasks. Details of conducting the tasks are described
     in the following subsections.
 </p>
 
@@ -555,10 +573,10 @@
         <td>Extract all png pictures from all the apk files and put them under the “pictures” folder. The path of the picture file should be encoded into the file name, e.g., a.apk/b/c.png should be moved to a.apk-b-c.png.</td>
         <td>6</td>
         <td>1523</td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task1/input.csv"> input.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task1/output.csv"> output.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task1/iomap.txt"> ioMap.txt </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task1/program.txt"> program.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task1/input.csv"> input.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task1/output.csv"> output.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task1/iomap.txt"> ioMap.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task1/program.txt"> program.txt </a></td>
     </tr>
 
     <tr>
@@ -566,10 +584,10 @@
         <td>Archive all apk files according to the first two sub-package names in their file name. For example, air.WildWildPuzzlesGoogle.apk should be moved to air/WildWildPuzzlesGoogle.</td>
         <td>4</td>
         <td>15247</td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task2/input.csv"> input.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task2/output.csv"> output.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task2/iomap.txt"> ioMap.txt </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task2/program.txt"> program.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task2/input.csv"> input.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task2/output.csv"> output.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task2/iomap.txt"> ioMap.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task2/program.txt"> program.txt </a></td>
     </tr>
 
     <tr>
@@ -577,24 +595,145 @@
         <td>Copy the largest apk package in each sub-directory generated in Task-2 to the temp directory.</td>
         <td>6</td>
         <td>15247</td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task3/input.csv"> input.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task3/output.csv"> output.csv </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task3/iomap.txt"> ioMap.txt </a></td>
-        <td><a href="https://enter-filepbe.github.io/data/case_study/task3/program.txt"> program.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task3/input.csv"> input.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task3/output.csv"> output.csv </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task3/iomap.txt"> ioMap.txt </a></td>
+        <td><a href="http://127.0.0.1:5000/data/case_study/task3/program.txt"> program.txt </a></td>
     </tr>
 </table>
 
 <H3 id="task1"> Task-1 </H3>
 
 <p>
-    #Task Description:<br/>
+    Considering the overwhelming amount of files decompressed from all the 15, 247 .apk files, here we asked
+    the participant to pick 5 .apk files (1, 523 files after decompressed) as global input.
+    We explained to the participant that the synthesized program can still be applied to all the other .apk files.
 </p>
 
+<H4> Iteration#1 </H4>
+<p>
+    At the first iteration, the participant first chose two .png files, put them under the "pictures" folder and rename them
+    with the path information. Then he picked one .MF file
+    and one .sqlite file, and marked them as examples that should not be changed.
+</p>
+<pre>
+  a74c81e72.a4ba6.a4816.ab956.aac3fe52fd9f.apk/assets/240x320/bBankRob.png => (rename|move, pictures/a74c81e72.a4ba6.a4816.ab956.aac3fe52fd9f.apk-assets-240x320-bBankRob.png)
+  aame.mobi.fingerfightlite.apk/res/drawable/lang_0101.png => (rename|move, pictures/aame.mobi.fingerfightlite.apk-res-drawable-lang_0101.png)
+  a2z.Mobile.MGMA13.apk/assets/chirpe_analytics.sqlite => (no_change, null)
+  a74c81e72.a4ba6.a4816.ab956.aac3fe52fd9f.apk/META-INF/MANIFEST.MF => (no_change, null)
+</pre>
 
+<p>
+    FilePBE wrongly focused on the modification dates and generated the following program:
+</p>
+<pre>
+  chain (modificationTime, NewHead);
+  if (modificationTime <=(NewHead) ConstDateTime(2013-01-14 12:08:44.000))
+  then {
+    doNothing;
+  } else {
+    partition(subPath(0, -1));
+    setName(ConstStr(/),subPath(0,-1),ConstStr(-),fileName);
+    setPath(ConstStr(pictures));
+  }
+</pre>
 
+<H4>Iteration#2</H4>
+<p>
+  After we explained the functions of the generated program, the participant carefully selected two more examples regarding the dates.
+</p>
+<pre>
+  a2z.Mobile.MGMA13.apk/res/drawable/maps_2x.png => (rename|move, pictures/a2z.Mobile.MGMA13.apk-res-drawable-maps_2x.png)
+  a74c81e72.a4ba6.a4816.ab956.aac3fe52fd9f.apk/assets/com_softgames_ad/ajax_loader.gif => (no_change, null)
+</pre>
+
+<p>
+    This time the expected program was successfully synthesized within 5.7 seconds and 7 rounds:
+</p>
+
+<pre>
+  partition (extension)
+  if (extension = ConstStr(png))
+  then {
+    setName(path, ConstStr(-), fileName);
+    setPath(ConstStr(pictures));
+  } else {
+    doNothing;
+  }
+</pre>
 
 <H3 id="task2"> Task-2 </H3>
+<p>
+    This task is similar to the Hades-f5 benchmark, but at a much larger scale.
+</p>
+<H4> Iteration#1 </H4>
+<p>
+  In this task, The participant chose 4 .apk.
+  Note that there were three different first domains and two files are with the same first domain but different second domains.
+</p>
+<pre>
+  a2z.Mobile.MGMA13.apk => (move, a2z/Mobile/a2z.Mobile.MGMA13.apk)
+  aame.mobi.fingerfightlite.apk => (move, aame/mobi/aame.mobi.fingerfightlite.apk)
+  abcdev.bookaobama.apk => (move, abcdev/bookaobama/abcdev.bookaobama.apk)
+  abcdev.bookheishehui.apk => (move, abcdev/bookheishehui/abcdev.bookheishehui.apk)
+</pre>
+
+<p>
+    FilePBE successfully synthesize the expected program within 5.9 seconds and 28 rounds:
+</p>
+<pre>
+  partition(nameSplit(".", 0));
+  partition(nameSplit(".", 1));
+  setPath(ConstStr(/), nameSplit(".", 0), ConstStr(/), nameSplit(".", 1));
+</pre>
+
 <H3 id="task3"> Task-3 </H3>
+<H4>Iteration#1</H4>
+<p>
+    At the first iteration, the participant selected four files, two were the largest in their corresponding directories and two were not.
+</p>
+<pre>
+  a2z/Mobile/a2z.Mobile.MGMA13.apk(7838834 B) => (copy, temp/a2z.Mobile.MGMA13.apk)
+  com/jb/com.jb.gokeyboard.theme.nbf.apk(4176805 B) => (no_change, null)
+  com/jb/com.jb.gokeyboard.theme.pch.apk(4348225 B) => (no_change, null)
+  com/jb/com.jb.gokeyboard.theme.tmewoodkeyboardtheme.apk(9303843 B) => (copy, temp/com.jb.gokeyboard.theme.tmewoodkeyboardtheme.apk)
+</pre>
+<p>
+    However, the synthesized program ended up only putting large files in the target directory
+</p>
+<pre>
+  chain (size, LongAsc);
+  if (size <=(LongAsc) ConstLong(4348225))
+  then {
+    doNothing;
+  } else {
+    copy(ConstStr(/temp));
+  }
+</pre>
+
+<H4>Iteration#2</H4>
+After we explained to the participant what the program represents, the participant went to another directory,
+chose the largest file and another one that was even larger than the previous two largest example files.
+Additional examples are:
+
+<pre>
+  air/air/air.air.ProjectMyth.apk (30035860 B) => (copy, temp/air.air.ProjectMyth.apk)
+  air/air/air.air.com.hazelbush.clumsyduck.ClumsyDuck.apk (12140967 B) => (no_change, null)
+</pre>
+
+<p>
+  With the renewed examples, the synthesizer successfully find out the intended program within 10.7 seconds and 38 rounds.
+</p>
+<pre>
+  partition (subPath(1, 3));
+  chain (size, LongAsc);
+  if (isTail)
+  then {
+    copy(ConstStr(/temp));
+  } else {
+    doNothing;
+  }
+</pre>
 
 </body>
 </html>

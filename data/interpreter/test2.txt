@@ -1,3 +1,0 @@
-chain-by size LongAsc
-  transform
-    addOrderSuffix

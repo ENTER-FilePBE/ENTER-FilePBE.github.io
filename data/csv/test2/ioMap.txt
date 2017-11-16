@@ -1,4 +1,0 @@
-rename i11 o1
-rename i9 o2
-rename i10 o3
-rename i8 o4

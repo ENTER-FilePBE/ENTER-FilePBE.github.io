@@ -1,9 +1,0 @@
-partition-by nameSplit("-",0)
-  chain-by modificationFeature TimeForward
-    if isHead
-      then
-        transform
-          setName(nameSplit("-",0))
-      else
-        transform
-          delete

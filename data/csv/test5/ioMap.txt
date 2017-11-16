@@ -1,5 +1,0 @@
-unzip i7 o7
-keep i8 o8
-keep i9 o9
-unzip i10 o10
-unzip i11 o11

@@ -1,6 +1,0 @@
-keep i11 o6
-keep i12 o7
-keep i14 o8
-delete i13 o10
-rename i15 o9
-delete i16 o11

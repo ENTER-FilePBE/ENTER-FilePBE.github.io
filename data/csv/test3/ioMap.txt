@@ -1,2 +1,0 @@
-zip i8 i9 o1
-zip i10 i11 o2
