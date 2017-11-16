@@ -1,0 +1,5 @@
+partition-by modificationYear
+  partition-by modificationMonth
+    partition-by modificationDay
+      transform
+        setPath(ConstStr(),path,ConstStr(/),modificationYear,ConstStr(/),modificationMonth,ConstStr(/),modificationDay)
