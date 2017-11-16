@@ -1,0 +1,33 @@
+Ours-f2
+
+--- target ---
+
+for those zip files with the same prefix, delete the old versions, and unzip the new one to corresponding directory
+
+--- input ---
+
+###
+151250018-v1.zip (example)
+151250018-v2.zip (example)
+151250038-v1.zip
+151250048-v1.zip
+151250052-v1.zip (example)
+151250052-v2.zip (example)
+151250052-v3.zip (example)
+151250054-v1.zip
+151250057-v1.zip
+151250057-v2.zip
+151250059-v1.zip
+151250072-v1.zip (example)
+###
+
+--- output ---
+
+151250018/151250018-v2.unzip
+151250038/151250038-v1.unzip
+151250048/151250048-v1.unzip
+151250052/151250052-v3.unzip
+151250054/151250054-v1.unzip
+151250057/151250057-v2.unzip
+151250059/151250059-v1.unzip
+151250072/151250072-v1.unzip

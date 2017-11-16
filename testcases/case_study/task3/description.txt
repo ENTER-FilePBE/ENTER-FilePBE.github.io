@@ -1,0 +1,10 @@
+
+--- target ---
+
+copy the largest file in each sub-directory to the 'temp' directory
+
+--- input ---
+
+###
+skip
+###

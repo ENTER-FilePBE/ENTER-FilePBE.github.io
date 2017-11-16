@@ -1,0 +1,33 @@
+Hades-F5
+
+--- target ---
+
+Put files in directories based on modification year/month/day
+
+--- input ---
+
+/IMG_201101011231.JPG
+...
+/IMG_201303031834.JPG
+
+--- output ---
+
+/2011/
+  1/
+    1/
+      IMG_201101011231.JPG
+      ...
+    ...
+  ...
+  12/
+    ...
+/2012/
+  ...
+/2013/
+  ...
+  3/
+    3/
+      IMG_201303031834.JPG
+      ...
+    ...
+  ...

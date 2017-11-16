@@ -1,0 +1,9 @@
+rename i1 o1
+rename i2 o2
+rename i3 o3
+rename i4 o4
+keep i12 o12
+rename i20 o20
+rename i21 o21
+keep i32 o32
+keep i35 o35

@@ -1,0 +1,65 @@
+Hades-F18
+
+--- target ---
+
+Convert xml files ≥ 990B to text files
+
+--- input ---
+
+###
+/project1/
+  resources/
+    pictures/
+      xxx.PNG (2569011B, example)
+      yyy.PNG (3186688B)
+    config/
+      preference.xml (233B)
+      layout.xml   (990B, example)
+      saving-0.xml (1024B, example)
+      saving-1.xml (2991B)
+      saving-2.xml (997B)
+      saving-3.xml (1234B)
+      saving-4.xml (2017B)
+      saving-5.xml (3678KB)
+      saving-6.xml (323B, example)
+      saving-7.xml (18B)
+    src/
+      tree.h
+      tree.cpp (example)
+      parser.h
+      parser.cpp
+      type.h
+      executor.h
+      executor.cpp
+      Makefile
+      main.cpp
+      run.sh (example, executable)
+/project2/
+  manifest.xml (991B, example)
+  setting/
+    attributes.xml
+    config.xml (40B, example)
+  src/
+    com/
+      sissel/
+        Main.java
+        data/
+          DataStub.java
+        logic/
+          HomeController.java
+          RoomController.java
+          PreferenceController.java
+          GameController.java
+        ui/
+          HomePage.java
+          RoomPage.java
+          PreferencePage.java
+          GamePage.java
+          control/
+            MyButton.java
+            MyText.java
+###
+
+--- output ---
+
+remain the same structure, change those >= 990B to text files

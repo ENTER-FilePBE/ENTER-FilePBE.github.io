@@ -1,0 +1,15 @@
+partition-by subPath(1,2)
+  chain-by size LongAsc
+    if isTail
+      then
+        transform
+          setName(ConstStr(lgst-), fileName)
+      else
+        chain-by size LongAsc
+          if <= size LongAsc ConstLong(99)
+            then
+              transform
+                setName(ConstStr(sml-), fileName)
+            else
+              transform
+                doNothing

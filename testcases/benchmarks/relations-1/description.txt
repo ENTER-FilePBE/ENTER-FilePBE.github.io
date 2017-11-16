@@ -1,0 +1,84 @@
+Ours-f1
+
+--- target ---
+
+copy the pdf file in each directory to /temp and name them "dir-file"
+
+--- input ---
+
+###
+/151250018/
+  report.pdf (example)
+  temp/
+    call.c (example)
+  src/
+    call.c (example)
+/151250038/
+  report.pdf (example)
+  src/
+    frameAllocator.h (example)
+    math.h
+    my_type.h
+    pager.h
+    pageTable.h
+    call.c
+    frameAllocator.c (example)
+    my_type.c
+    pager.c
+    pageTable.c
+/151250048/
+  report.pdf (example)
+  src/
+    page.h (example)
+    process.h
+    prop.h
+    call.c
+    page.c
+    process.c
+/151250052/
+  report.pdf
+  src/
+    allocated.h
+    allocated.c
+    call.c
+/151250054/
+  report.pdf
+  src/
+    memory.h
+    page.h
+    call.c
+    memory.c
+    page.c
+###
+
+--- output ---
+
+/temp/
+  151250018-report.pdf
+  151250038-report.pdf
+  151250048-report.pdf
+/151250018/
+  src/
+    call.c
+  temp/
+    call.c
+/151250038/
+  src/
+    frameAllocator.h
+    math.h
+    my_type.h
+    pager.h
+    pageTable.h
+    call.c
+    frameAllocator.c
+    my_type.c
+    pager.c
+    pageTable.c
+/151250048/
+  src/
+    page.h
+    process.h
+    prop.h
+    call.c
+    page.c
+    process.c

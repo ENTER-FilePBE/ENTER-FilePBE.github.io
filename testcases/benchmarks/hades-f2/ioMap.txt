@@ -1,0 +1,5 @@
+keep i1 o1
+keep i12 o12
+keep i3 o3
+chmod+x i34 o34
+chmod+x i41 o41

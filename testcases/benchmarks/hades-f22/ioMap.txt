@@ -1,0 +1,7 @@
+keep i1 o1
+keep i2 o2
+keep i40 o40
+keep i110 o110
+delete i111 o111
+delete i207 o207
+delete i512 o512

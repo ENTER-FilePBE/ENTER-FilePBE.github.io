@@ -1,0 +1,46 @@
+Hades-F9
+
+--- target ---
+
+Convert .mp3 .wma and .m4a files to .ogg
+
+--- input ---
+
+###
+Spirits.mp3 (example)
+She.mp3 (example)
+NO-MAN.mp3
+Changes.mp3
+Mid Air.wma (example)
+Lullaby.wma (example)
+Sing Along.wma
+Can't You See.m4a (example)
+America.m4a (example)
+Yellow.m4a
+/TBBT/
+  S04-E01.mp4 (example)
+  S04-E02.mp4
+  S04-E03.mp4
+  S04-E04.mp4
+  S04-E05.mp4
+  S04-E06.mp4
+  S04-E07.mp4
+  S04-E08.mp4
+  S04-E09.mp4
+  S04-E010.mp4
+  S04-E011.mp4
+  S04-E012.mp4
+Digital Monster.mp4
+Watchmen.mkv (example)
+Splatoon.mkv
+Splatoon2.mkv
+Little Star.wav (example)
+Lost Stars.wav
+Oceans Deep.wav
+PrayStation.ogg (example)
+Music Box.ogg
+###
+
+--- output ---
+
+...

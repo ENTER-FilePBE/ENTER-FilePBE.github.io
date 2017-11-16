@@ -1,0 +1,9 @@
+partition-by subPath(1,3)
+  chain-by size LongAsc
+    if isTail
+      then
+        transform
+          copy(ConstStr(/), ConstStr(temp))
+      else
+        transform
+          doNothing

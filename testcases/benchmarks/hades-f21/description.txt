@@ -1,0 +1,135 @@
+Hades-F21
+
+--- target ---
+
+Append parent name to each .c file and copy under “MOSS”
+
+--- input ---
+
+###
+voluntary_test/
+  test_141250018_cx_0.c (example)
+  test_141250018_cx_0.h (example)
+  test_151250091_ljm_1.c
+  test_151250100_lyx_0.c
+  test_151250176_xkf_0.c
+  test_151250178_yym_0.c
+type.h (example)
+test_utils.h
+test_utils.c
+test_script.py (example)
+test2.c
+test.h
+test.c
+/test/
+  testcase.txt
+  utils.c (example)
+  my_test.c
+read_method.h
+read_method.c
+performance_test.h
+performance_test.c
+page_table.h
+page_table.c
+page_selector.h
+page_selector.c
+main.c
+dynamic_schedule.c
+/doc/
+  md2pdf.sh
+  performance_benchmarks.md
+  experiment guide.md
+  experiment guide.pdf
+  test cases design.md
+  memory management(preview).key
+  memory management.key
+  test_results.xlsx
+const.h
+call.h
+call.c
+bottom.h
+bottom.c
+approximateLRU.h
+approximateLRU.c
+address_translator.h
+address_translator.c
+ReadMe.txt
+README.md
+INT.h
+INT.c
+CMakeLists.txt
+###
+
+--- output ---
+
+/MOSS/
+  voluntary_test-test_141250018_cx_0.c
+  voluntary_test-test_151250091_ljm_1.c
+  voluntary_test-test_151250100_lyx_0.c
+  voluntary_test-test_151250176_xkf_0.c
+  voluntary_test-test_151250178_yym_0.c
+  test-utils.c
+  test-my_test.c
+  test2.c
+  test.c
+  read_method.c
+  performance_test.c
+  page_table.c
+  page_selector.c
+  main.c
+  dynamic_schedule.c
+  call.c
+  bottom.c
+  approximateLRU.c
+  address_translator.c
+  INT.c
+voluntary_test/
+  test_141250018_cx_0.c
+  test_141250018_cx_0.h
+  test_151250091_ljm_1.c
+  test_151250100_lyx_0.c
+  test_151250176_xkf_0.c
+  test_151250178_yym_0.c
+type.h
+test_utils.h
+test_utils.c
+test_script.py
+test2.c
+test.h
+test.c
+/test/
+  testcase.txt
+  my-test.c
+read_method.h
+read_method.c
+performance_test.h
+performance_test.c
+page_table.h
+page_table.c
+page_selector.h
+page_selector.c
+main.c
+dynamic_schedule.c
+/doc/
+  md2pdf.sh
+  performance_benchmarks.md
+  experiment guide.md
+  experiment guide.pdf
+  test cases design.md
+  memory management(preview).key
+  memory management.key
+  test_results.xlsx
+const.h
+call.h
+call.c
+bottom.h
+bottom.c
+approximateLRU.h
+approximateLRU.c
+address_translator.h
+address_translator.c
+ReadMe.txt
+README.md
+INT.h
+INT.c
+CMakeLists.txt

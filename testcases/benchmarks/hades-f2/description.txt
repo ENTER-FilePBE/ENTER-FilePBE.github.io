@@ -1,0 +1,82 @@
+Hades-F2
+
+--- target ---
+
+Make all script files executable
+
+--- input ---
+
+###
+/school/
+  manage.sh (executable, example)
+  2016/
+    cpp-project/
+      tree.h
+      tree.cpp (example)
+      parser.h
+      parser.cpp
+      type.h
+      executor.h
+      executor.cpp
+      Makefile
+      main.cpp
+      run.sh (executable)
+    java-project/
+      doc/
+        requirement.docx (example)
+        architect.docx
+        design.docx
+      src/
+        com/
+          sissel/
+            Main.java
+            data/
+              DataStub.java
+            logic/
+              HomeController.java
+              RoomController.java
+              PreferenceController.java
+              GameController.java
+            ui/
+              HomePage.java
+              RoomPage.java
+              PreferencePage.java
+              GamePage.java
+              control/
+                MyButton.java
+                MyText.java
+      run.sh (executable)
+    slides/
+      chapter1.pdf
+      chapter2.pdf
+      chapter3.pdf
+      chapter4.pdf
+      chapter5.pdf
+      chapter6.pdf
+  2017/
+    linux/
+      homework1/
+        script.sh (non-executable, example)
+      homework2/
+        script.sh (non-executable)
+      homework3/
+        script.sh (non-executable)
+      homework4/
+        script.sh (non-executable)
+/tools/
+  download.sh (executable)
+  status.sh (executable)
+/downloads/
+  Sam/
+    script.sh (non-executable)
+  Jerry/
+    script.sh (non-executable, example)
+  See you tonight.mp4
+  See you tonight.torrent
+  temp/
+    photo.jpg
+###
+
+--- output ---
+
+all .sh files made executable

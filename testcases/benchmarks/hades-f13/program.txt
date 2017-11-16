@@ -1,0 +1,4 @@
+partition-by extension
+  partition-by path
+    transform
+      setPath(extension, path)

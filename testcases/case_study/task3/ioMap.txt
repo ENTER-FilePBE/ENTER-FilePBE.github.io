@@ -1,0 +1,9 @@
+keep i1 o1
+copy i1 o19173
+keep i52 o52
+keep i14776 o14776
+keep i14777 o14777
+keep i14916 o14916
+copy i14916 o16102
+keep i62 o62
+copy i62 o19786

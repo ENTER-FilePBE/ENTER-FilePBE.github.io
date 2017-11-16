@@ -1,0 +1,9 @@
+partition-by nameSplit("-", 0)
+  chain-by modificationTime TimeBack
+    if isHead
+      then
+        transform
+          unzip(nameSplit("-", 0))
+      else
+        transform
+          delete

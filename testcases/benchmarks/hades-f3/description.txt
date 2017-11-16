@@ -1,0 +1,125 @@
+Hades-F3
+
+--- target ---
+
+copy all text and bash files to directory 'temp'
+
+--- input ---
+
+###
+architect.txt (example)
+/module-ui/
+  web/
+    tool.sh (example)
+    design.docx (example)
+    build.sh
+    src/
+      home.jsp (example)
+      search.jsp
+      profile.jsp
+      hotel-profile.jsp
+      reservation.jsp
+  android/
+    build.sh (example)
+    src/
+      help.sh
+      MainActivity.java (example)
+      SearchListActivity.java
+      ProfileActivity.java
+      HotelProfileActivity.java
+      ReservationActivity.java
+    resources/
+      sources.txt (example)
+/module-data/
+  account.txt
+  er.txt
+  backup.sh
+  src/
+    DataService.h
+    DataService.cpp
+    SqlConnector.h
+    SqlConnector.cpp
+/module-business/
+  business.txt
+  make.sh
+  test.sh
+  src/
+    Controller.h
+    UserController.cpp
+    HotelController.cpp
+    AdministratorController.cpp
+    DataAccessor.h
+    DataAccessor.cpp
+  includes/
+    Util.h
+    DataService.h
+/test/
+  case1/
+    design.txt
+    run.sh
+  case2/
+    design.txt
+    run.sh
+  case3/
+    design.txt
+    run.sh
+  case4/
+    design.txt
+    run.sh
+  case5/
+    design.txt
+    run.sh
+  case6/
+    design.txt
+    run.sh
+  case7/
+    design.txt
+    run.sh
+###
+
+--- output ---
+
+existing directories not changed, add one more directory under root:
+
+/temp/
+  architect.txt
+  /module-ui/
+    web/
+      tool.sh
+      build.sh
+    android/
+      build.sh
+      src/
+        help.sh
+      resources/
+        sources.txt
+  /module-data/
+    account.txt
+    er.txt
+    backup.sh
+  /module-business/
+    business.txt
+    make.sh
+    test.sh
+  /test/
+    case1/
+      design.txt
+      run.sh
+    case2/
+      design.txt
+      run.sh
+    case3/
+      design.txt
+      run.sh
+    case4/
+      design.txt
+      run.sh
+    case5/
+      design.txt
+      run.sh
+    case6/
+      design.txt
+      run.sh
+    case7/
+      design.txt
+      run.sh

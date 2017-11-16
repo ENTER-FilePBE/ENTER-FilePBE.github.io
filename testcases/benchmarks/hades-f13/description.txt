@@ -1,0 +1,73 @@
+Hades-F13
+
+--- target ---
+
+Organize all files based on their extensions
+
+--- input ---
+
+###
+Spirits.mp3 (example)
+She.mp3
+NO-MAN.mp3
+Changes.mp3
+Mid Air.wma
+Lullaby.wma (example)
+Sing Along.wma
+Can't You See.m4a
+America.m4a
+Yellow.m4a
+/TBBT/
+  S04-E01.mp4
+  S04-E02.mp4 (example)
+  S04-E03.mp4
+  S04-E04.mp4
+  S04-E05.mp4
+  S04-E06.mp4
+  S04-E07.mp4
+Digital Monster.mp4 (example)
+Watchmen.mkv
+Little Star.wav
+Lost Stars.wav
+Oceans Deep.wav
+PrayStation.ogg
+Music Box.ogg
+###
+
+--- output ---
+
+/mp3/
+  Spirits.mp3
+  She.mp3
+  NO-MAN.mp3
+  Changes.mp3
+  ...10 more mp3
+/wma/
+  Mid Air.wma
+  Lullaby.wma
+  Sing Along.wma
+  ...10 more wma
+/m4a/
+  Can't You See.m4a
+  America.m4a
+  Yellow.m4a
+  ...10 more m4a
+/mp4/
+  Digital Monster.mp4
+  TBBT/
+    S04-E01.mp4
+    S04-E02.mp4
+    S04-E03.mp4
+    S04-E04.mp4
+    S04-E05.mp4
+    S04-E06.mp4
+    S04-E07.mp4
+/mkv/
+  Watchmen.mkv
+/wav/
+  Little Star.wav
+  Lost Stars.wav
+  Oceans Deep.wav
+/ogg/
+  PrayStation.ogg
+  Music Box.ogg

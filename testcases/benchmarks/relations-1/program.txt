@@ -1,0 +1,10 @@
+partition-by subPath(0, 2)
+  partition-by extension
+    if = extension ConstStr(pdf)
+      then
+        transform
+          addPrefix(subPath(0,2))
+          setPath(ConstStr(temp))
+      else
+        transform
+          doNothing
